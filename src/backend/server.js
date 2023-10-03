@@ -48,6 +48,7 @@ app.listen(PORT, () => {
 function stringifyJsonData(data) {
   return JSON.stringify(data);
 }
+
 function sendMessageToClients(jsonMessage) {
   wss.clients.forEach((client) => {
     if (client.readyState === WebSocket.OPEN) {
